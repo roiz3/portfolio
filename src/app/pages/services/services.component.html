@@ -1,0 +1,16 @@
+<main>
+    
+    <form [formGroup]="form"> 
+        <h2>
+            {{'contacto' | titlecase}}
+        </h2>
+        <input formControlName="asunto" type="text" placeholder="asunto">
+        <input formControlName="nombre" type="text" placeholder="nombre">
+        <input formControlName="correo" type="text" placeholder="correo">
+        <input formControlName="celular" type="number" placeholder="celular">
+
+        <button [ngClass]="{'disabled': !form.valid}" [disabled]="form.invalid" (click)="submit()">
+            Enviar
+        </button>
+    </form>
+</main>

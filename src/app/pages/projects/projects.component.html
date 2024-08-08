@@ -1,0 +1,11 @@
+<div class="cards">
+    <div class="card" *ngFor="let card of list">
+        <div class="card__image">
+            <img [src]="card.image" alt="">
+        </div>
+        <div class="card__content">
+            <p> {{card.title | titlecase}} </p>
+            <p>{{card.pais | titlecase}}</p>
+        </div>
+    </div>
+</div>
